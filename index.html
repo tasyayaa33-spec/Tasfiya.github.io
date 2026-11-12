@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+
+  <!-- CSS -->
+  <style>
+    body {
+      background-color: #f8efd9;
+      font-family: Arial, sans-serif;
+      color: #303858;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background-color: #59668e;
+      color: #f5df9d;
+    }
+
+    .judul-menu {
+      font-size: 23px;
+      font-weight: bold;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #f0dda6;
+      color: #343b62;
+    }
+
+    /* HEADER */
+    .header {
+      background-color: #f0dda6;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .header h1 {
+      font-size: 65px;
+      font-weight: 900;
+      color: #59668e;
+      margin: 15px 0;
+    }
+
+    .header p {
+      letter-spacing: 2px;
+    }
+
+    /* KONTEN */
+    .konten {
+      padding: 40px 30px;
+    }
+
+    .konten h2 {
+      color: #59668e;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .konten p {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* FOTO PROFIL */
+    .foto-container {
+      position: relative;
+      width: 260px;
+      height: 320px;
+      margin: 20px auto 35px;
+    }
+
+    /* BINGKAI FOTO */
+    .bingkai-foto {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #59668e;
+      border: 6px solid #f0dda6;
+      border-radius: 130px 130px 25px 25px;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* GAMBAR */
+    .foto {
+      position: absolute;
+      width: 220px;
+      height: 285px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 110px 110px 20px 20px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    /* KOTAK NAMA */
+    .foto-label {
+      position: absolute;
+      background-color: white;
+      padding: 12px 18px;
+      border-radius: 12px;
+      left: -35px;
+      bottom: 15px;
+      z-index: 2;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .foto-label h3 {
+      color: #59668e;
+      font-size: 17px;
+      font-weight: bold;
+      margin: 0 0 5px;
+    }
+
+    .foto-label p {
+      color: #777;
+      font-size: 12px;
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    /* KARTU */
+    .kartu {
+      background-color: #59668e;
+      color: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      min-height: 170px;
+    }
+
+    .kartu h2 {
+      color: #f0dda6;
+      font-size: 35px;
+    }
+
+    /* TOMBOL */
+    .tombol {
+      background-color: #59668e;
+      color: white;
+      padding: 12px 25px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .tombol:hover {
+      background-color: #f0dda6;
+      color: #303858;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #59668e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+
+      .w3-sidebar {
+        width: 100% !important;
+        height: auto;
+        position: relative;
+      }
+
+      .page-content {
+        margin-left: 0 !important;
+      }
+
+      .header h1 {
+        font-size: 38px;
+      }
+
+      .foto-container {
+        margin-top: 30px;
+      }
+
+      .foto-label {
+        left: -10px;
+      }
+
+      .konten {
+        padding: 25px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="w3-sidebar w3-bar-block sidebar" style="width:25%">
+    <h3 class="w3-bar-item judul-menu">MY PORTFOLIO</h3>
+    <a href="profil.html" class="w3-bar-item w3-button">PROFIL</a>
+    <a href="pendidikan.html" class="w3-bar-item w3-button">PENDIDIKAN</a>
+    <a href="pengalaman.html" class="w3-bar-item w3-button">PENGALAMAN</a>
+    <a href="hubungi saya.html" class="w3-bar-item w3-button">HUBUNGI SAYA</a>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div style="margin-left:25%">
+
+    <!-- HEADER -->
+    <div class="w3-container header">
+
+      <p>WELCOME TO MY PERSONAL WEBSITE</p>
+
+      <h1>MY PORTFOLIO</h1>
+
+      <p>PROFILE | EDUCATION | EXPERIENCE | CERTIFICATE</p>
+
+    </div>
+
+    <!-- KONTEN UTAMA -->
+    <div class="w3-container konten">
+
+      <div class="w3-row-padding">
+
+        <div class="w3-half">
+
+          <p>HELLO, WELCOME TO MY WEBSITE</p>
+
+          <h2>Selamat Datang di Portofolio Saya</h2>
+
+          <p>
+            Website ini merupakan portofolio pribadi
+            yang berisi informasi mengenai data diri,
+            riwayat pendidikan, pengalaman magang,
+            serta sertifikat yang telah saya peroleh.
+          </p>
+
+          <p>
+            Melalui website ini, saya ingin memperkenalkan
+            diri dan menampilkan perjalanan pendidikan
+            serta pengalaman yang menjadi bagian dari
+            proses pengembangan kemampuan saya.
+          </p>
+
+          <a href="profil.html" class="w3-button tombol">
+            LIHAT PROFIL
+          </a>
+
+        </div>
+
+        <!-- FOTO PROFIL DENGAN BINGKAI -->
+        <div class="w3-half">
+
+          <div class="foto-container">
+
+            <div class="bingkai-foto"></div>
+
+            <img src="ft sy.jpeg" alt="Foto Saya" class="foto">
+
+            <div class="foto-label">
+              <h3>Tasfiyatul Uyun</h3>
+              <p>Mahasiswa Teknik Informatika</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- KARTU MENU -->
+    <div class="w3-container">
+
+      <div class="w3-row-padding">
+
+        <div class="w3-third">
+          <div class="kartu">
+            <h2>01</h2>
+            <h4>PROFILE</h4>
+            <p>Kenali informasi tentang diri saya.</p>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="kartu">
+            <h2>02</h2>
+            <h4>EDUCATION</h4>
+            <p>Perjalanan riwayat pendidikan saya.</p>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="kartu">
+            <h2>03</h2>
+            <h4>EXPERIENCE</h4>
+            <p>Pengalaman magang dan kegiatan saya.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>MY PORTFOLIO WEBSITE © 2026</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

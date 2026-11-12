@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Kontak Saya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+
+  <style>
+    body {
+      background-color: #f8efd9;
+      font-family: Arial, sans-serif;
+      color: #303858;
+      margin: 0;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background-color: #59668e;
+      color: #f5df9d;
+    }
+
+    .judul-menu {
+      font-size: 23px;
+      font-weight: bold;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #f0dda6;
+      color: #343b62;
+    }
+
+    /* KONTEN */
+    .main-content {
+      margin-left: 25%;
+    }
+
+    .header {
+      background-color: #f0dda6;
+      text-align: center;
+      padding: 45px;
+    }
+
+    .header h1 {
+      color: #59668e;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px;
+    }
+
+    .section-title {
+      color: #59668e;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      color: #666;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* KARTU KONTAK */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .contact-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      border-bottom: 5px solid #59668e;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card h3 {
+      color: #59668e;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .contact-card p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.8;
+      word-break: break-word;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      color: #59668e;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* PENUTUP */
+    .closing {
+      background-color: #59668e;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 15px;
+      margin-top: 35px;
+    }
+
+    .closing h2 {
+      color: #f0dda6;
+      font-weight: bold;
+    }
+
+    .closing p {
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #59668e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 100% !important;
+        height: auto;
+        position: relative;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      .header h1 {
+        font-size: 35px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="w3-sidebar w3-bar-block sidebar" style="width:25%">
+    <h3 class="w3-bar-item judul-menu">MY PORTFOLIO</h3>
+    <a href="profil.html" class="w3-bar-item w3-button">PROFIL</a>
+    <a href="pendidikan.html" class="w3-bar-item w3-button">PENDIDIKAN</a>
+    <a href="pengalaman.html" class="w3-bar-item w3-button">PENGALAMAN</a>
+    <a href="hubungi saya.html" class="w3-bar-item w3-button active">HUBUNGI SAYA</a>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div style="margin-left:25%">
+
+    <!-- HEADER -->
+    <div class="w3-container header">
+
+      <p>GET IN TOUCH</p>
+
+      <h1>CONTACT ME</h1>
+
+      <p>Informasi Kontak Saya</p>
+
+    </div>
+
+
+    <!-- INFORMASI KONTAK -->
+    <section class="section">
+
+      <h2 class="section-title">Hubungi Saya</h2>
+
+      <p class="intro">
+        Terima kasih telah mengunjungi website portofolio saya.
+        Berikut merupakan informasi kontak yang dapat digunakan
+        untuk menghubungi saya.
+      </p>
+
+
+      <div class="contact-container">
+
+        <!-- NOMOR HP -->
+        <div class="contact-card">
+
+          <div class="contact-icon">📱</div>
+
+          <h3>Nomor HP</h3>
+
+          <p>
+            Nomor telepon:
+            <br>
+            <b>083157681418</b>
+          </p>
+
+          <a href="tel:08xxxxxxxxxx">
+            Hubungi Saya → 083157681418
+          </a>
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+        <div class="contact-card">
+
+          <div class="contact-icon">💬</div>
+
+          <h3>WhatsApp</h3>
+
+          <p>No WhatsApp:
+            <br>
+            <b>083157681418</b>
+          </p>
+
+          <p>
+            Hubungi saya melalui WhatsApp
+            untuk keperluan komunikasi.
+          </p>
+
+          <a href="https://wa.me/qr/BGCY4J5ZEIO7C1" target="_blank">
+            Kirim Pesan →
+          </a>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="contact-card">
+
+          <div class="contact-icon">✉️</div>
+
+          <h3>Email</h3>
+
+          <p>
+            Alamat email:
+            <br>
+            <b>tasyayaa33@gmail.com</b>
+          </p>
+
+          <a href="mailto:tasyayaa33@gmail.com">
+            Kirim Email →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PENUTUP -->
+      <div class="closing">
+
+        <h2>Terima Kasih!</h2>
+
+        <p>
+          Terima kasih telah meluangkan waktu untuk
+          melihat portofolio saya. Semoga informasi
+          yang ditampilkan dapat memberikan gambaran
+          mengenai diri, pendidikan, dan pengalaman saya.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+      <p>MY PORTFOLIO WEBSITE © 2026</p>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

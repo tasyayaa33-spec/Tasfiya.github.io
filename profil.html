@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Profil Saya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+
+  <style>
+    body {
+      background-color: #f8efd9;
+      font-family: Arial, sans-serif;
+      color: #303858;
+      margin: 0;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background-color: #59668e;
+      color: #f5df9d;
+    }
+
+    .judul-menu {
+      font-size: 23px;
+      font-weight: bold;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #f0dda6;
+      color: #343b62;
+    }
+
+    /* HEADER */
+    .header {
+      background-color: #f0dda6;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .header h1 {
+      font-size: 60px;
+      font-weight: bold;
+      color: #59668e;
+    }
+
+    /* FOTO DAN PERKENALAN */
+    .profile {
+      background-color: #59668e;
+      color: white;
+      padding: 45px 35px;
+    }
+
+    /* BINGKAI FOTO */
+    .foto-bingkai {
+      width: 100%;
+      max-width: 420px;
+      height: 500px;
+      padding: 8px;
+      background-color: #f0dda6;
+      border-radius: 25px;
+      box-shadow: 12px 12px 0px #303858,
+        0 10px 25px rgba(0, 0, 0, 0.15);
+      margin: 10px auto 25px;
+    }
+
+    /* FOTO PROFIL */
+    .foto-profil {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background-color: #d90000;
+      border: 3px solid white;
+      border-radius: 17px;
+    }
+
+    .profile h2 {
+      color: #f0dda6;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .profile p {
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .subjudul {
+      color: #f0dda6;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    /* BAGIAN UMUM */
+    .profile-section {
+      padding: 35px;
+      margin-bottom: 10px;
+    }
+
+    .section-label {
+      color: #59668e;
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-size: 13px;
+    }
+
+    .profile-section h2 {
+      color: #59668e;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    /* TENTANG SAYA */
+    .about-card {
+      background-color: white;
+      padding: 30px;
+      border-left: 6px solid #59668e;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .about-card p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    /* DATA DIRI */
+    .data-diri {
+      padding: 35px;
+    }
+
+    .data-diri h2 {
+      color: #59668e;
+      font-weight: bold;
+    }
+
+    .data-card {
+      background-color: #f0dda6;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .data-card h4 {
+      color: #59668e;
+      font-weight: bold;
+    }
+
+    .data-card p {
+      color: #444;
+    }
+
+    /* PERJALANAN */
+    .journey-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .journey-card {
+      background-color: white;
+      padding: 28px;
+      border-radius: 12px;
+      border-bottom: 5px solid #59668e;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .journey-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .journey-card h3 {
+      color: #59668e;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .journey-card p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .journey-card a {
+      display: inline-block;
+      color: #59668e;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+
+    .journey-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* KEMAMPUAN */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skills-container span {
+      background-color: #59668e;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #59668e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+
+      .w3-sidebar {
+        width: 100% !important;
+        height: auto;
+        position: relative;
+      }
+
+      .page-content {
+        margin-left: 0 !important;
+      }
+
+      .header h1 {
+        font-size: 38px;
+      }
+
+      .foto-bingkai {
+        max-width: 320px;
+        height: 420px;
+        margin: 20px auto 30px;
+      }
+
+      .profile {
+        padding: 25px 15px;
+      }
+
+      .profile-section,
+      .data-diri {
+        padding: 22px;
+      }
+
+      .journey-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="w3-sidebar w3-bar-block sidebar" style="width:25%">
+    <h3 class="w3-bar-item judul-menu">MY PORTFOLIO</h3>
+    <a href="profil.html" class="w3-bar-item w3-button active">PROFIL</a>
+    <a href="pendidikan.html" class="w3-bar-item w3-button">PENDIDIKAN</a>
+    <a href="pengalaman.html" class="w3-bar-item w3-button">PENGALAMAN</a>
+    <a href="hubungi saya.html" class="w3-bar-item w3-button">HUBUNGI SAYA</a>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page-content" style="margin-left:25%">
+
+    <!-- HEADER -->
+    <div class="w3-container header">
+      <p>GET TO KNOW ME</p>
+      <h1>MY PROFILE</h1>
+      <p>Informasi dan Data Diri</p>
+    </div>
+
+    <!-- FOTO PROFIL DAN PERKENALAN -->
+    <div class="w3-container profile">
+
+      <div class="w3-row-padding">
+
+        <div class="w3-half">
+
+          <div class="foto-bingkai">
+            <img src="ft sy.jpeg" alt="Foto Profil" class="foto-profil">
+          </div>
+
+        </div>
+
+        <div class="w3-half">
+
+          <p class="subjudul">WELCOME TO MY PROFILE</p>
+
+          <h2>Halo, Saya Tasfiyatul Uyun</h2>
+
+          <p>
+            Saya merupakan seorang mahasiswa yang memiliki
+            semangat untuk belajar dan mengembangkan
+            kemampuan diri.
+          </p>
+
+          <p>
+            Saya senang mendapatkan pengalaman baru,
+            mempelajari hal-hal baru, serta meningkatkan
+            keterampilan untuk mempersiapkan masa depan.
+          </p>
+
+          <p>
+            Melalui website portofolio ini, saya ingin
+            memperkenalkan diri dan menampilkan perjalanan
+            pendidikan serta pengalaman yang telah saya
+            dapatkan.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TENTANG SAYA -->
+    <section class="profile-section">
+
+      <p class="section-label">ABOUT ME</p>
+      <h2>Tentang Saya</h2>
+
+      <div class="about-card">
+
+        <p>
+          Perkenalkan, saya Tasfiyatul Uyun, seorang mahasiswa
+          STTIKOM Insan Unggul pada Program Studi Teknik
+          Informatika.
+        </p>
+
+        <p>
+          Saya memiliki semangat untuk terus belajar,
+          mencoba hal-hal baru, serta mengembangkan
+          kemampuan diri, khususnya dalam bidang teknologi
+          informasi dan komputer.
+        </p>
+
+        <p>
+          Sebelum melanjutkan pendidikan ke perguruan tinggi,
+          saya pernah mendapatkan pengalaman Praktik Kerja
+          Lapangan (PKL) di BAPPEDA LITBANG Kota Cilegon.
+          Saya juga pernah mengikuti Uji Kompetensi (UKOM)
+          yang diuji oleh Banten TV ketika menempuh pendidikan
+          di jurusan Broadcasting.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- INFORMASI DATA DIRI -->
+    <div class="w3-container data-diri">
+
+      <h2>INFORMASI DATA DIRI</h2>
+
+      <div class="w3-row-padding">
+
+        <div class="w3-half">
+          <div class="data-card">
+            <h4>Nama Lengkap</h4>
+            <p>Tasfiyatul Uyun</p>
+          </div>
+        </div>
+
+        <div class="w3-half">
+          <div class="data-card">
+            <h4>Tempat, Tanggal Lahir</h4>
+            <p>Cilegon, 14 juni 2007</p>
+          </div>
+        </div>
+
+        <div class="w3-half">
+          <div class="data-card">
+            <h4>Alamat</h4>
+            <p>Link.cipaot,Kepuh,Ciwandan</p>
+          </div>
+        </div>
+
+        <div class="w3-half">
+          <div class="data-card">
+            <h4>Status</h4>
+            <p>Mahasiswa</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PERJALANAN SAYA -->
+    <section class="profile-section">
+
+      <p class="section-label">MY JOURNEY</p>
+      <h2>Perjalanan Saya</h2>
+
+      <div class="journey-container">
+
+        <div class="journey-card">
+
+          <div class="journey-icon">🎓</div>
+
+          <h3>Pendidikan</h3>
+
+          <p>
+            Perjalanan pendidikan saya dimulai dari SDN Cipaot,
+            MTs Hikmatul Ulum, MA Al Inayah sekaligus
+            Pondok Pesantren Al Inayah, kemudian SMK Darus
+            Syifa jurusan Broadcasting. Saat ini saya
+            melanjutkan pendidikan di STTIKOM Insan Unggul
+            Program Studi Teknik Informatika.
+          </p>
+
+          <a href="pendidikan.html">
+            Lihat Pendidikan →
+          </a>
+
+        </div>
+
+        <div class="journey-card">
+
+          <div class="journey-icon">💼</div>
+
+          <h3>Pengalaman PKL</h3>
+
+          <p>
+            Saya pernah melaksanakan Praktik Kerja Lapangan
+            (PKL) di BAPPEDA LITBANG Kota Cilegon.
+            Pengalaman tersebut menjadi kesempatan untuk
+            mengenal lingkungan kerja dan menambah
+            pengalaman.
+          </p>
+
+          <a href="pengalaman.html">
+            Lihat Pengalaman →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- KEMAMPUAN SAYA -->
+    <section class="profile-section">
+
+      <p class="section-label">MY SKILLS</p>
+      <h2>Kemampuan Saya</h2>
+
+      <div class="skills-container">
+
+        <span>Microsoft Office</span>
+        <span>Pengoperasian Komputer</span>
+        <span>Komunikasi</span>
+        <span>Kerja Sama Tim</span>
+        <span>Manajemen Waktu</span>
+        <span>Dasar Broadcasting</span>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>MY PORTFOLIO WEBSITE © 2026</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

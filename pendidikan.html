@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendidikan - My Portfolio</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+
+  <style>
+    body {
+      background-color: #f8efd9;
+      font-family: Arial, sans-serif;
+      color: #303858;
+      margin: 0;
+    }
+
+    /* SIDEBAR - SAMA DENGAN BERANDA */
+    .sidebar {
+      background-color: #59668e;
+      color: #f5df9d;
+    }
+
+    .judul-menu {
+      font-size: 23px;
+      font-weight: bold;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #f0dda6 !important;
+      color: #343b62 !important;
+    }
+
+    /* KONTEN UTAMA */
+    .main-content {
+      padding: 35px;
+    }
+
+    /* HEADER */
+    .header {
+      background-color: #59668e;
+      color: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    /* KARTU PENDIDIKAN */
+    .education-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-left: 6px solid #f0dda6;
+    }
+
+    .education-card span {
+      display: inline-block;
+      background-color: #f0dda6;
+      color: #303858;
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .education-card h3 {
+      color: #59668e;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .education-card h2 {
+      color: #59668e;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .education-card h4 {
+      color: #59668e;
+      font-weight: bold;
+    }
+
+    .education-card p {
+      line-height: 1.8;
+      text-align: justify;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #59668e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 100% !important;
+        height: auto;
+        position: relative;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 15px;
+      }
+
+      .header h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="w3-sidebar w3-bar-block sidebar" style="width:25%">
+    <h3 class="w3-bar-item judul-menu">MY PORTFOLIO</h3>
+    <a href="profil.html" class="w3-bar-item w3-button">PROFIL</a>
+    <a href="pendidikan.html" class="w3-bar-item w3-button active">PENDIDIKAN</a>
+    <a href="pengalaman.html" class="w3-bar-item w3-button">PENGALAMAN</a>
+    <a href="hubungi saya.html" class="w3-bar-item w3-button">HUBUNGI SAYA</a>
+
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div style="margin-left:25%">
+
+    <div class="main-content">
+
+      <!-- HEADER -->
+      <div class="header">
+        <h1>Riwayat Pendidikan</h1>
+
+        <p>
+          Perjalanan pendidikan saya dari sekolah dasar
+          hingga perguruan tinggi.
+        </p>
+      </div>
+
+      <!-- PENDIDIKAN 01 -->
+      <div class="education-card">
+
+        <span>01</span>
+
+        <h3>SDN Cipaot</h3>
+
+        <p>
+          Saya memulai perjalanan pendidikan di SDN Cipaot
+          sebagai dasar untuk melanjutkan pendidikan ke
+          jenjang berikutnya.
+        </p>
+
+      </div>
+
+      <!-- PENDIDIKAN 02 -->
+      <div class="education-card">
+
+        <span>02</span>
+
+        <h3>MTs Hikmatul Ulum</h3>
+
+        <p>
+          Setelah menyelesaikan pendidikan dasar, saya
+          melanjutkan pendidikan di MTs Hikmatul Ulum.
+        </p>
+
+      </div>
+
+      <!-- PENDIDIKAN 03 -->
+      <div class="education-card">
+
+        <span>03</span>
+
+        <h3>MA Al Inayah & Pondok Pesantren Al Inayah</h3>
+
+        <p>
+          Saya melanjutkan pendidikan di MA Al Inayah
+          sekaligus menjalani kehidupan di Pondok Pesantren
+          Al Inayah selama 1 tahun.
+        </p>
+
+      </div>
+
+      <!-- PENDIDIKAN 04 -->
+      <div class="education-card">
+
+        <span>04</span>
+
+        <h2>SEKOLAH MENENGAH KEJURUAN</h2>
+
+        <h4>SMK Darus Syifa</h4>
+
+        <p>
+          Saya melanjutkan pendidikan di SMK Darus Syifa
+          dengan mengambil jurusan Broadcasting.
+          Selama 2 tahun menempuh pendidikan, saya mempelajari
+          pengetahuan dan keterampilan yang berkaitan
+          dengan dunia penyiaran dan media.
+        </p>
+
+        <p>
+          Saya juga mendapatkan pengalaman praktik
+          serta mengikuti kegiatan Praktik Kerja Lapangan
+          (PKL) dan Uji Kompetensi (UKOM).
+        </p>
+
+      </div>
+
+      <!-- PENDIDIKAN 05 -->
+      <div class="education-card">
+
+        <span>05</span>
+
+        <h3>STTIKOM Insan Unggul</h3>
+
+        <p>
+          Saat ini saya melanjutkan pendidikan di
+          STTIKOM Insan Unggul dengan mengambil
+          Program Studi Teknik Informatika.
+        </p>
+
+        <p>
+          Melalui program studi ini, saya mempelajari
+          bidang teknologi informasi, khususnya
+          pengembangan kemampuan di bidang komputer,
+          pemrograman, dan pembuatan website.
+        </p>
+
+        <p>
+          Saya berharap ilmu dan pengalaman yang
+          diperoleh selama perkuliahan dapat menjadi
+          bekal untuk mengembangkan kemampuan dan
+          mempersiapkan karier di masa depan.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>MY PORTFOLIO WEBSITE © 2026</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

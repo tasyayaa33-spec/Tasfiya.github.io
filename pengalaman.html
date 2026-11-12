@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Pengalaman dan Sertifikat</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+
+  <style>
+    body {
+      background-color: #f8efd9;
+      font-family: Arial, sans-serif;
+      color: #303858;
+      margin: 0;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background-color: #59668e;
+      color: #f5df9d;
+    }
+
+    .judul-menu {
+      font-size: 23px;
+      font-weight: bold;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #f0dda6;
+      color: #343b62;
+    }
+
+    /* KONTEN */
+    .main-content {
+      margin-left: 25%;
+    }
+
+    .header {
+      background-color: #f0dda6;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .header h1 {
+      color: #59668e;
+      font-size: 45px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 35px;
+    }
+
+    .section-title {
+      color: #59668e;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .small-title {
+      color: #a17b62;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+
+    /* KARTU PENGALAMAN */
+    .experience-card {
+      background: white;
+      padding: 35px;
+      margin-bottom: 30px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .experience-card h2 {
+      color: #59668e;
+      font-size: 34px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .experience-card h3 {
+      color: #59668e;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 28px;
+    }
+
+    .experience-card p {
+      color: #666;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .experience-card li {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .detail-info {
+      margin: 25px 0;
+    }
+
+    .detail-info p {
+      margin-bottom: 12px;
+    }
+
+    /* HAL YANG DIPELAJARI */
+    .learning-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .learning-card {
+      background: white;
+      padding: 30px;
+      min-height: 245px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .learning-icon {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .learning-card h3 {
+      color: #59404b;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .learning-card p {
+      color: #806d70;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    /* PENGALAMAN DAN KETERAMPILAN */
+    .skill-box {
+      background: #f0dda6;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .skill-box p {
+      line-height: 1.9;
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* SERTIFIKAT */
+    .certificate-card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .certificate-card h3 {
+      color: #59668e;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .certificate-photo {
+      text-align: center;
+      background: #f8efd9;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .certificate-photo img {
+      width: 85%;
+      max-width: 650px;
+      height: auto;
+      border: 5px solid #f0dda6;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .certificate-card p {
+      color: #666;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #59668e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 1000px) {
+      .learning-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 100% !important;
+        height: auto;
+        position: relative;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      .header h1 {
+        font-size: 32px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .learning-container {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        padding: 22px;
+      }
+
+      .experience-card h2 {
+        font-size: 27px;
+      }
+
+      .certificate-photo img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="w3-sidebar w3-bar-block sidebar" style="width:25%">
+    <h3 class="w3-bar-item judul-menu">MY PORTFOLIO</h3>
+    <a href="profil.html" class="w3-bar-item w3-button">PROFIL</a>
+    <a href="pendidikan.html" class="w3-bar-item w3-button">PENDIDIKAN</a>
+    <a href="pengalaman.html" class="w3-bar-item w3-button active">PENGALAMAN</a>
+    <a href="hubungi saya.html" class="w3-bar-item w3-button">HUBUNGI SAYA</a>
+
+  </div>
+
+
+  <!-- Page Content -->
+  <div style="margin-left:25%">
+
+    <!-- HEADER -->
+    <div class="w3-container header">
+
+      <p>MY EXPERIENCE</p>
+
+      <h1>PENGALAMAN SAYA</h1>
+
+    </div>
+
+
+    <!-- PENGALAMAN PKL -->
+    <section class="section">
+
+      <div class="experience-card">
+
+        <p class="small-title">PRAKTIK KERJA LAPANGAN</p>
+
+        <h2>Pengalaman PKL Saat Sekolah</h2>
+
+        <div class="detail-info">
+
+          <p>
+            <b>Tempat:</b> BAPPEDA LITBANG Kota Cilegon
+          </p>
+
+          <p>
+            <b>Periode:</b> 19 Februari 2024 - 17 Mei 2024
+          </p>
+
+          <p>
+            <b>Posisi:</b> Bagian Persuratan dan Kesekretariatan (Magang)
+          </p>
+
+        </div>
+
+
+        <h3>Deskripsi Pengalaman</h3>
+
+        <p>
+          Selama melaksanakan Praktik Kerja Lapangan (PKL),
+          saya ditempatkan di bagian Persuratan dan
+          Kesekretariatan. Pada bagian ini, saya mendapatkan
+          pengalaman secara langsung dalam proses pengelolaan
+          surat dan dokumen di lingkungan perkantoran.
+        </p>
+
+
+        <h3>Tugas dan Tanggung Jawab</h3>
+
+        <p>
+          Adapun tugas dan tanggung jawab yang saya lakukan
+          selama kegiatan magang meliputi:
+        </p>
+
+        <ul>
+          <li>Menerima dan mencatat surat masuk yang diterima oleh kantor.</li>
+          <li>Melakukan registrasi dan pencatatan surat keluar.</li>
+          <li>Mendistribusikan surat kepada bidang atau bagian yang dituju.</li>
+          <li>Mengelola dan menyusun arsip surat agar tersimpan dengan rapi.</li>
+          <li>Melakukan input data surat ke dalam pencatatan administrasi.</li>
+          <li>Membantu memastikan surat dan dokumen tersampaikan kepada pihak terkait.</li>
+        </ul>
+
+
+        <h3>Pengalaman dan Keterampilan</h3>
+
+        <p>
+          Melalui kegiatan magang ini, saya memperoleh
+          pemahaman mengenai alur pengelolaan surat masuk
+          dan surat keluar, proses pendistribusian dokumen,
+          serta pengarsipan berkas. Pengalaman ini juga
+          membantu saya meningkatkan ketelitian, kedisiplinan,
+          tanggung jawab, kemampuan mengoperasikan komputer,
+          dan komunikasi dalam lingkungan kerja.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- HAL YANG SAYA PELAJARI -->
+    <section class="section">
+
+      <p class="small-title">MY LEARNING EXPERIENCE</p>
+
+      <h2 class="section-title">Hal yang Saya Pelajari</h2>
+
+      <div class="learning-container">
+
+        <div class="learning-card">
+
+          <div class="learning-icon">📩</div>
+
+          <h3>Pengelolaan Surat</h3>
+
+          <p>
+            Memahami proses penerimaan, pencatatan,
+            registrasi, dan pengelolaan surat masuk
+            maupun surat keluar.
+          </p>
+
+        </div>
+
+
+        <div class="learning-card">
+
+          <div class="learning-icon">📁</div>
+
+          <h3>Pengarsipan Dokumen</h3>
+
+          <p>
+            Mempelajari cara menyusun, menyimpan,
+            dan mengelompokkan arsip surat agar
+            mudah ditemukan kembali.
+          </p>
+
+        </div>
+
+
+        <div class="learning-card">
+
+          <div class="learning-icon">📋</div>
+
+          <h3>Input dan Pengolahan Data</h3>
+
+          <p>
+            Belajar melakukan input data surat,
+            mencatat informasi dokumen, serta
+            memastikan data tersusun dengan rapi.
+          </p>
+
+        </div>
+
+
+        <div class="learning-card">
+
+          <div class="learning-icon">📨</div>
+
+          <h3>Distribusi Surat</h3>
+
+          <p>
+            Memahami proses penyaluran dan
+            pendistribusian surat kepada bidang
+            atau bagian yang dituju.
+          </p>
+
+        </div>
+
+
+        <div class="learning-card">
+
+          <div class="learning-icon">⏰</div>
+
+          <h3>Kedisiplinan dan Tanggung Jawab</h3>
+
+          <p>
+            Belajar menyelesaikan pekerjaan dengan
+            tepat waktu, teliti, disiplin, dan
+            penuh tanggung jawab.
+          </p>
+
+        </div>
+
+
+        <div class="learning-card">
+
+          <div class="learning-icon">🤝</div>
+
+          <h3>Komunikasi dan Kerja Sama</h3>
+
+          <p>
+            Mengembangkan kemampuan berkomunikasi
+            dan bekerja sama dengan pegawai serta
+            berbagai bidang di lingkungan kantor.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PENGALAMAN UKOM -->
+    <section class="section">
+
+      <div class="experience-card">
+
+        <p class="small-title">UJI KOMPETENSI</p>
+
+        <h2>Uji Kompetensi (UKOM) Banten TV</h2>
+
+        <p>
+          Selain pengalaman Praktik Kerja Lapangan,
+          saya juga pernah mengikuti Uji Kompetensi (UKOM)
+          saat menempuh pendidikan di SMK Darus Syifa
+          jurusan Broadcasting. Kegiatan ini diuji oleh
+          Banten TV sebagai bagian dari pengujian
+          kompetensi keahlian.
+        </p>
+
+        <h3>Pengalaman yang Diperoleh</h3>
+
+        <p>
+          Melalui kegiatan Uji Kompetensi ini, saya
+          mendapatkan pengalaman dalam mengikuti
+          proses penilaian kompetensi sesuai bidang
+          Broadcasting serta kesempatan untuk
+          mengembangkan kemampuan dan pengetahuan
+          yang telah dipelajari selama sekolah.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERTIFIKAT -->
+    <section class="section">
+
+      <p class="small-title">MY CERTIFICATES</p>
+
+      <h2 class="section-title">Sertifikat Saya</h2>
+
+
+      <!-- SERTIFIKAT PKL -->
+      <div class="certificate-card">
+
+        <h3>Sertifikat Praktik Kerja Lapangan</h3>
+
+        <p>
+          Sertifikat sebagai bukti telah melaksanakan
+          kegiatan Praktik Kerja Lapangan di BAPPEDA
+          LITBANG Kota Cilegon.
+        </p>
+
+        <div class="certificate-photo">
+
+          <img src="Sertifikat Praktik Kerja Lapangan SMK.png" alt="Sertifikat PKL BAPPEDA LITBANG Kota Cilegon">
+
+        </div>
+
+      </div>
+
+
+      <!-- SERTIFIKAT UKOM -->
+      <div class="certificate-card">
+
+        <h3>Sertifikat Uji Kompetensi Banten TV</h3>
+
+        <p>
+          Sertifikat sebagai bukti telah mengikuti
+          Uji Kompetensi bidang Broadcasting yang
+          diuji oleh Banten TV.
+        </p>
+
+        <div class="certificate-photo">
+
+          <img src="ukom.jpeg" alt="Sertifikat UKOM Banten TV">
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+      <p>MY PORTFOLIO WEBSITE © 2026</p>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
